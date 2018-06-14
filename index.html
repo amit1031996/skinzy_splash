@@ -1,0 +1,329 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+          integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <script src="js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/jquery.modal.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="untitled-font-1/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @-moz-document url-prefix() {
+            .tar{
+                position: static !important;
+            }
+            .icon-logo1{
+                margin-top: 0;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("body").addClass("animated fadeIn");
+            $('a.open-modal').click(function(event) {
+                $(this).modal({
+                    fadeDuration: 250
+                });
+                return false;
+            });
+        });
+/*        setTimeout(function() {
+            $(".click").css('visibility','visible');
+            $(".click").addClass("animated fadeIn");
+        }, 1000);*/
+        setTimeout(function() {
+            $(".intro1").css('visibility','visible');
+            $(".intro1").addClass("animated fadeInRight");
+        }, 750);
+        setTimeout(function() {
+            $(".intro2").css('visibility','visible');
+            $(".intro2").addClass("animated fadeIn");
+            $(".click").css('animation','glow 7s linear infinite');
+        }, 2000);
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('transparent');
+                $('.navbar-brand').addClass('norm');
+                $('.nav-link').addClass('downlink');
+                $('#abc').css('color','#42A5F5');
+                $('.act').css('color','#000');
+                $('.act').css('background-color','#fff');
+                $('#arrow').css('visibility','hidden');
+
+            } else {
+                $('nav').removeClass('transparent');
+                $('.navbar-brand').removeClass('norm');
+                $('.nav-link').removeClass('downlink');
+                $('#abc').css('color','black');
+                $('.act').css('color','#fff');
+                $('.act').css('background-color','#42A5F5');
+                $('#arrow').css('visibility','visible');
+
+            }
+
+            if ($(document).scrollTop() > 650) {
+                setTimeout(function() {
+                    $('.slide1').css('visibility','visible');
+                    $('.slide1').addClass('animated fadeInRight');
+                }, 200);
+            }
+            if ($(document).scrollTop() > 1020) {
+                setTimeout(function() {
+                    $('.slide2').css('visibility','visible');
+                    $('.slide2').addClass('animated fadeIn');
+                }, 300);
+                setTimeout(function() {
+                    $('.slide3').css('visibility','visible');
+                    $('.slide3').addClass('animated fadeIn');
+                }, 1100);
+            }
+            if ($(document).scrollTop() > 1500) {
+                setTimeout(function() {
+                    $('.slide4').css('visibility','visible');
+                    $('.slide4').addClass('animated fadeInDown');
+                }, 200);
+            }
+
+        });
+        $(".click").hover(function(){
+            $(this).css("color", "yellow");
+        }, function(){
+            $(this).css("background-color", "pink");
+        });
+        $(function() {
+            $('.hashscroll').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+    <title>Skinzy 2.0</title>
+<body style="display: flex;flex-direction: column;font-family: 'Lato', sans-serif;">
+<nav class="navbar navbar-fixed-top navbar-inverse" style="padding:0;">
+
+    <a id="title" class="navbar-brand" href="www.google.com"><i id="abc" class="icon icon-logo1"></i>
+        <div class="brand-name"style="font-family: 'Lato', sans-serif;">Skinzy</div></a>
+    <ul class="nav navbar-nav" style="height:100%;float:right;margin-right:50px;">
+        <li class="nav-item ">
+            <a class="nav-link hashscroll" style="padding-top:15px;margin-left:20px;padding-left:5px;padding-right:5px;" href="#two">About Us
+                <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="padding-top:15px;margin-left:20px;padding-left:5px;padding-right:5px;" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="padding-top:15px;margin-left:20px;padding-left:5px;padding-right:5px;" href="#">FAQs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link open-modal" style="padding-top:15px;margin-left:20px;padding-left:5px;padding-right:5px;" href="#ex1" rel="modal:open" >Login</a>
+        </li>
+    </ul>
+</nav>
+<br><br>
+<section class="main" style="height: 87%;z-index: -999;">
+    <br><br><br>
+    <div class="tar" style="height: 100%;display: flex;align-items: center;position: fixed;background-attachment: fixed">
+            <div class="click" style="flex: 1;">
+                <a class="hashscroll" id="jump" href="#two">
+                <i style="font-size: 600px;" class="icon icon-logo1"></i>
+                </a>
+            </div>
+        <div style="height:100%;width:100%; flex: 3; display: flex;align-items: flex-end;justify-content: center">
+            <div style="height:85%;width: 75%;margin-top: 5%;">
+                <div class="intro1" style="font-size: 70px;text-align: right">Skinzy</div>
+                <p class="intro2" style="text-align: right;font-size: 20px;">
+                    Brought to you by the best of technology and medicine, Skinzy provides a simple and effective solution to your skin-related diagnostic questions.
+                    <br> Scan.&nbsp;&nbsp;Upload.&nbsp; Get results.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--Modal-->
+    <div class="modal login_cont" id="ex1" style="display:none;">
+        <div class="form">
+            <h1>Login</h1>
+            <br><br><br>
+            <form action="#">
+                Username <br>
+                <input class="namebox" type="text"><br>
+                Password <br>
+                <input class="passbox" type="password">
+                <br><br>
+                <input type="button" value="Login" class="log">
+            </form>
+        </div>
+    </div>
+</section>
+<a href="#two" class="hashscroll" id="arrow">
+    <div style="width: 100%; text-align: center;cursor: pointer;position: fixed">
+        <img src="img/ic_keyboard_arrow_down_black_24px.svg" alt="">
+    </div>
+</a>
+<br><br>
+<section id="two" style="overflow-y: hidden;height:240%;width: 100%;background: rgba(58,70,141,0.98); color: #dddddd;display: flex;flex-direction: column;box-shadow: 0 3px 40px 2px rgba(0,0,0,0.3),0 -3px 10px 2px rgba(0,0,0,0.3);">
+    <br><br><br>
+    <div style="height: 95%;width: 95%;display: flex;border: dashed 2px #dddddd;margin: auto;flex-direction: column">
+        <br><br><br><br><br>
+
+        <div style="flex: 1;display: flex;">
+            <div style="flex: 1;display: flex;justify-content: center">
+                <div>
+                    <img height="325px;" src="
+                    img/disease.png" >
+                </div>
+                <div>
+                    <img src="img/169953-200.png" alt="" class="slide1">
+                </div>
+            </div>
+            <div style="display: flex;flex: 1;margin: auto;">
+                <div style="height: 75%;width: 85%;margin: auto;/*background: rgba(0,0,0,0.2);*/">
+                    <br>
+                    <h1 style="text-align: end">What we do</h1>
+                    <br>
+                    <p style="font-size: larger;text-align: end">
+                        Skinzy is a project headed by Dr. Dhananjay Kalbande , Professor in  Computer Engineering Department of Sardar Patel Institute of Technology,Andheri West, Mumbai,India based on Medical images and data processing for early stage detection of skin diseases. This is a live project in collaboration with Seth G.S. Medical College and KEM Hospital since 2015 under the expert guidance of Dr.Uday Khopkar, Professor and Head of SKIN and VD Department,KEM Hospital.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div style="flex: 1;display: flex;">
+            <div style="display: flex;flex: 1;margin: auto;">
+                <div style="height: 75%;width: 85%;margin: auto;/*background: rgba(0,0,0,0.2);*/">
+                    <br>
+                    <h1 style="text-align: start">How we do it</h1>
+                    <br>
+                    <p style="font-size: larger;text-align: start">
+                        A dedicated Research Team in SPIT involved in designing of various Artificial Intelligence techniques including image processing and machine learning for detection of skin diseases in collaboration with dermatologist.
+                </div>
+            </div>
+            <div style="flex: 1;display: flex;justify-content: center">
+                <div>
+                    <img src="img/191.png" alt="" height="250px">
+                </div>
+                <div style="display: flex;flex-direction: column">
+                    <div style="flex: 0.2"></div>
+                    <div style="flex: 1">
+                        <img src="img/1080491-200.png" alt="" height="100px" class="slide2">
+                    </div>
+                </div>
+                <div style="display: flex;flex-direction: column">
+                    <div style="flex: 0.2"></div>
+                    <div style="flex: 1">
+                        <img src="img/911654-200.png" alt="" height="125px" style="margin-top: -10px" class="slide3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div style="flex: 1;display: flex;">
+            <div style="flex: 1;display: flex;justify-content: center" class="slide4">
+                <div>
+                    <img src="img/compfinal.png" alt="" height="200px">
+                </div>
+                <div style="display: flex;flex-direction: column">
+                    <div style="flex: 0.2">
+
+                    </div>
+                    <div style="flex: 1">
+                        <img src="img/finalcell.png" alt="" height="120px">
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;flex: 1;;margin: auto;">
+                <div style="height: 75%;width: 85%;margin: auto;/*background: rgba(0,0,0,0.2);*/">
+                    <br>
+                    <h1 style="text-align: end">What we do it for</h1>
+                    <br>
+                    <p style="font-size: larger;text-align: end">
+                        Skinzy is meant primarily for research purposes and for the betterment of the society, by serving as a technological aid. The research is not intended to substitute any dermatologist. It is intended to serve as a tool for preliminary diagnosis where the expertise of dermatologists is not available. All we want to do is make the world a better place.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</section>
+<div style="bottom: 0;height: 40%;width: 100%;background: #353535;display: flex;margin: auto;color: #9b9b9b;flex-direction: column;padding-bottom: 16px;">
+    <div style="margin: auto;width: 75%;height: 70%;display: flex;">
+        <div style="flex: 1.5;text-align: start">
+            <h1 style="color: white">Skinzy</h1>
+            <div>
+                Scan.  Upload.  Get results.
+            </div>
+        </div>
+        <div style="flex:1"></div>
+        <div style="flex: 1.5;">
+            <div style="color:white;">
+                EXPLORE
+            </div>
+            <br>
+            <div class="foota">
+                FAQs
+            </div>
+
+            <div class="foota">
+                Login
+            </div>
+
+            <div class="foota">
+                About Us
+            </div>
+        </div>
+
+        <div style="flex: 1.5;text-align: center">
+            <div style="color:white;">
+                THE TEAM
+            </div>
+            <br>
+            <div class="foota">
+                About Us
+            </div>
+            <div class="foota">
+                Contact Us
+
+            </div>
+
+            <div class="foota">
+                Locate Us
+            </div>
+            <div class="foota">
+                Social Media
+            </div>
+        </div>
+        <div style="flex: 1.5;">
+            <div style="color:white;text-align: right">
+                FOUNDERS
+            </div>
+            <br>
+            <div style="text-align: right">
+
+                <div class="foota">
+                    Dr. Dhananjay Kalbande
+                </div>
+                <div class="foota">
+                    Dr. Uday Khopkar
+                </div>
+
+            </div>
+        </div>
+        <div style="flex:1"></div>
+    </div>
+    <div style="width: 100%;text-align: center">
+            &copy;&nbsp;
+            Skinzy.in,&nbsp;&nbsp;2017
+    </div>
+</div>
+</body>
+</html>
+
